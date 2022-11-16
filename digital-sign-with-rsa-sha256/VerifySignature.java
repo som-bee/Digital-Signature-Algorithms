@@ -19,7 +19,7 @@ public class VerifySignature {
 
             Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
             cipher.init(Cipher.DECRYPT_MODE, pub);
-            try (FileInputStream in = new FileInputStream("digital-sign-with-rsa-sha256/Recieved/dig-sign.txt");
+            try (FileInputStream in = new FileInputStream("digital-sign-with-rsa-sha256/Output/dig-sign.txt");
             FileOutputStream out = new FileOutputStream("digital-sign-with-rsa-sha256/Verification/decrypted-dig-sign.txt")) {
             processFile(cipher, in, out);
 
